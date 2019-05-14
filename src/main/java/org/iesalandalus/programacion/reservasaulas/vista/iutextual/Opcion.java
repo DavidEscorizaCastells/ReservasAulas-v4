@@ -1,4 +1,6 @@
-package org.iesalandalus.programacion.reservasaulas.vista;
+package org.iesalandalus.programacion.reservasaulas.vista.iutextual;
+
+import org.iesalandalus.programacion.reservasaulas.vista.IVistaReservasAulas;
 
 public enum Opcion {
 	SALIR("Salir") {
@@ -98,7 +100,7 @@ public enum Opcion {
 	};
 	
 	private String mensajeAMostrar;
-	private static IVistaReservasAulas vista;
+	private static VistaReservasAulas vista;
 	
 	private Opcion(String mensajeAMostrar) {
 		this.mensajeAMostrar=mensajeAMostrar;
@@ -110,7 +112,7 @@ public enum Opcion {
 	
 	public abstract void ejecutar();
 	
-	protected static void setVista(IVistaReservasAulas vista) {
+	protected static void setVista(VistaReservasAulas vista) {
 		Opcion.vista = vista;
 	}
 	
