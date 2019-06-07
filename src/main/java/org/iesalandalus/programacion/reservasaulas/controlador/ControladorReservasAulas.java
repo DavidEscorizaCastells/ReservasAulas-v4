@@ -58,6 +58,11 @@ public class ControladorReservasAulas implements IControladorReservasAulas {
 	}
 	
 	@Override
+	public List<Aula> getAulas() {
+		return modelo.getAulas();
+	}
+	
+	@Override
 	public void insertarProfesor(Profesor profesor) throws OperationNotSupportedException {
 		modelo.insertarProfesor(profesor);
 	}
@@ -78,6 +83,11 @@ public class ControladorReservasAulas implements IControladorReservasAulas {
 	}
 	
 	@Override
+	public List<Profesor> getProfesores() {
+		return modelo.getProfesores();
+	}
+	
+	@Override
 	public void realizarReserva(Reserva reserva) throws OperationNotSupportedException {
 		modelo.realizarReserva(reserva);
 	}
@@ -90,6 +100,11 @@ public class ControladorReservasAulas implements IControladorReservasAulas {
 	@Override
 	public List<String> representarReservas(){
 		return modelo.representarReservas();
+	}
+	
+	@Override
+	public List<Reserva> getReservas() {
+		return modelo.getReservas();
 	}
 	
 	@Override

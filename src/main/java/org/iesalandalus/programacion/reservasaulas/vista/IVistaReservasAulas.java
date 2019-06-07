@@ -8,36 +8,4 @@ public interface IVistaReservasAulas {
 
 	void comenzar();
 
-	void salir();
-
-	void insertarAula();
-
-	void borrarAula();
-
-	void buscarAula();
-
-	void listarAulas();
-
-	void insertarProfesor();
-
-	void borrarProfesor();
-
-	void buscarProfesor();
-
-	void listarProfesores();
-
-	void realizarReserva();
-
-	void aunlaReserva();
-
-	void listarReservas();
-
-	void listarReservasAula();
-
-	void listarReservasProfesor();
-
-	void listarReservasPermanencia();
-
-	void consultarDisponibilidad();	
-
 }

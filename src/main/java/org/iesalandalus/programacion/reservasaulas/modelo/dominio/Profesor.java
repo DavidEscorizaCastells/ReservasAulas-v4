@@ -65,12 +65,13 @@ public class Profesor implements Serializable {
 	public void setTelefono(String telefono) {
 		if (telefono==null || telefono.matches(ER_TELEFONO)) {
 			this.telefono=telefono;}
-		else {
-			if (!telefono.matches(ER_TELEFONO)) {
+		else if (telefono.trim().equals("")){
+			this.telefono=null;
+		} else if (!telefono.matches(ER_TELEFONO)) {
 				throw new IllegalArgumentException ("El teléfono del profesor no es válido.");
-			}
 		}
 	}
+	
 
 	@Override
 	public int hashCode() {

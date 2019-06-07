@@ -22,6 +22,8 @@ public interface IControladorReservasAulas {
 	Aula buscarAula(Aula aula);
 
 	List<String> representarAulas();
+	
+	List<Aula> getAulas();
 
 	void insertarProfesor(Profesor profesor) throws OperationNotSupportedException;
 
@@ -30,7 +32,9 @@ public interface IControladorReservasAulas {
 	Profesor buscarProfesor(Profesor profesor);
 
 	List<String> representarProfesores();
-
+	
+	List<Profesor> getProfesores();
+	
 	void realizarReserva(Reserva reserva) throws OperationNotSupportedException;
 
 	void anularReserva(Reserva reserva) throws OperationNotSupportedException;
@@ -44,5 +48,7 @@ public interface IControladorReservasAulas {
 	List<Reserva> getReservasPermanencia(Permanencia permanencia);
 
 	boolean consultarDisponibilidad(Aula aula, Permanencia permanencia);
+
+	List<Reserva> getReservas();
 
 }
